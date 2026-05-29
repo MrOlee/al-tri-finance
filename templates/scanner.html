@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Scanner</title>
 
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="scanner">
+
+    <h1>Scanner Struk OCR</h1>
+
+    <br>
+
+    <input type="file" id="receipt">
+
+    <br><br>
+
+    <button class="btn" onclick="scanReceipt()">
+        Scan Struk
+    </button>
+
+    <br><br>
+
+    <pre id="result"></pre>
+
+</div>
+
+<script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+<script src="/static/js/scanner.js"></script>
+
+</body>
+</html>
