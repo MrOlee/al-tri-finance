@@ -310,8 +310,6 @@ body{
   line-height:1.8;
 }
 
-/* RESPONSIVE */
-
 @media(max-width:1200px){
 
   .chart-container,
