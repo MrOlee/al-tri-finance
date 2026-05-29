@@ -44,74 +44,8 @@ new Chart(ctx, {
         ]
     },
     options: {
-        responsive:true,
-        plugins:{
-            legend:{
-                labels:{
-                    color:'white'
-                }
-            }
-        },
-        scales:{
-            y:{
-                ticks:{
-                    color:'white'
-                },
-                grid:{
-                    color:'rgba(255,255,255,0.05)'
-                }
-            },
-            x:{
-                ticks:{
-                    color:'white'
-                },
-                grid:{
-                    color:'rgba(255,255,255,0.05)'
-                }
-            }
-        }
+        responsive:true
     }
 });
-
-}
-
-const pie = document.getElementById('pieChart');
-
-if(pie){
-
-new Chart(pie, {
-    type:'doughnut',
-    data:{
-        labels:[
-            'Makanan',
-            'Transport',
-            'Belanja',
-            'Tagihan'
-        ],
-        datasets:[{
-            data:[
-                40,
-                25,
-                20,
-                15
-            ],
-            backgroundColor:[
-                '#00ff9d',
-                '#0084ff',
-                '#ff9900',
-                '#b026ff'
-            ]
-        }]
-    },
-    options:{
-        plugins:{
-            legend:{
-                labels:{
-                    color:'white'
-                }
-            }
-        }
-    }
-})
 
 }
