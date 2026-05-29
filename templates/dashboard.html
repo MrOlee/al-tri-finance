@@ -1,37 +1,299 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link rel="stylesheet" href="/static/css/style.css">
+  <title>AL-TRI FINANCE</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="/static/css/style.css">
+
+  <!-- ICON -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- CHART -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
 
-<div class="navbar">
-    <div class="logo">AL-TRI FINANCE</div>
+<!-- SIDEBAR -->
 
-    <a href="/reports">
-        <button class="btn">Laporan</button>
+<div class="sidebar">
+
+  <div class="logo">
+    <h1>AL-TRI</h1>
+    <span>FINANCE</span>
+  </div>
+
+  <div class="menu">
+
+    <a class="active" href="#">
+      <i class="fa-solid fa-house"></i>
+      Dashboard
     </a>
+
+    <a href="#">
+      <i class="fa-solid fa-money-bill-transfer"></i>
+      Transaksi
+    </a>
+
+    <a href="#">
+      <i class="fa-solid fa-barcode"></i>
+      Scanner Struk
+    </a>
+
+    <a href="#">
+      <i class="fa-solid fa-chart-pie"></i>
+      Laporan
+    </a>
+
+    <a href="#">
+      <i class="fa-solid fa-wallet"></i>
+      Dompet
+    </a>
+
+    <a href="#">
+      <i class="fa-solid fa-robot"></i>
+      AI Analisa
+    </a>
+
+    <a href="#">
+      <i class="fa-solid fa-gear"></i>
+      Pengaturan
+    </a>
+
+  </div>
+
 </div>
 
-<div class="dashboard">
+<!-- MAIN -->
 
-    <div class="cards">
+<div class="main">
 
-        <div class="card">
-            <p>Total Saldo</p>
-            <h2 class="green">Rp12.500.000</h2>
+  <!-- TOPBAR -->
+
+  <div class="topbar">
+
+    <div>
+      <h2>Dashboard</h2>
+    </div>
+
+    <div class="top-icons">
+
+      <i class="fa-solid fa-bell"></i>
+
+      <div class="profile">
+        <img src="https://i.pravatar.cc/100" alt="">
+        <div>
+          <h4>AL Tri</h4>
+          <p>Premium User</p>
         </div>
+      </div>
 
-        <div class="card">
+    </div>
+
+  </div>
+
+  <!-- HERO -->
+
+  <div class="hero">
+
+    <h1>Hi, AL Tri 👋</h1>
+
+    <p>
+      Kelola keuanganmu dengan cerdas dan modern.
+    </p>
+
+  </div>
+
+  <!-- CARDS -->
+
+  <div class="cards">
+
+    <div class="card green-card">
+
+      <div>
+        <p>Total Saldo</p>
+        <h2>Rp12.500.000</h2>
+      </div>
+
+      <div class="icon-box green">
+        <i class="fa-solid fa-wallet"></i>
+      </div>
+
+    </div>
+
+    <div class="card blue-card">
+
+      <div>
+        <p>Pemasukan</p>
+        <h2>Rp4.200.000</h2>
+      </div>
+
+      <div class="icon-box blue">
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
+
+    </div>
+
+    <div class="card red-card">
+
+      <div>
+        <p>Pengeluaran</p>
+        <h2>Rp2.100.000</h2>
+      </div>
+
+      <div class="icon-box red">
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+
+    </div>
+
+    <div class="card purple-card">
+
+      <div>
+        <p>Sisa Anggaran</p>
+        <h2>Rp2.100.000</h2>
+      </div>
+
+      <div class="icon-box purple">
+        <i class="fa-solid fa-chart-pie"></i>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- CHART -->
+
+  <div class="chart-container">
+
+    <div class="chart-box">
+      <h3>Ringkasan Keuangan</h3>
+      <canvas id="financeChart"></canvas>
+    </div>
+
+    <div class="pie-box">
+      <h3>Pengeluaran Kategori</h3>
+      <canvas id="pieChart"></canvas>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+
+  <div class="bottom-grid">
+
+    <!-- TRANSAKSI -->
+
+    <div class="transactions">
+
+      <div class="section-title">
+        <h3>Transaksi Terbaru</h3>
+      </div>
+
+      <div class="transaction">
+
+        <div class="left">
+          <div class="circle green-bg">
+            <i class="fa-solid fa-arrow-down"></i>
+          </div>
+
+          <div>
+            <h4>Gaji Bulanan</h4>
             <p>Pemasukan</p>
-            <h2 class="blue">Rp4.200.000</h2>
+          </div>
         </div>
 
-        <div class="card">
-            <p>Pengeluaran</p>
+        <h3 class="green-text">
+          +Rp4.000.000
+        </h3>
+
+      </div>
+
+      <div class="transaction">
+
+        <div class="left">
+          <div class="circle red-bg">
+            <i class="fa-solid fa-arrow-up"></i>
+          </div>
+
+          <div>
+            <h4>Makan Siang</h4>
+            <p>Makanan</p>
+          </div>
+        </div>
+
+        <h3 class="red-text">
+          -Rp25.000
+        </h3>
+
+      </div>
+
+      <div class="transaction">
+
+        <div class="left">
+          <div class="circle orange-bg">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+
+          <div>
+            <h4>Belanja</h4>
+            <p>Kebutuhan</p>
+          </div>
+        </div>
+
+        <h3 class="red-text">
+          -Rp75.000
+        </h3>
+
+      </div>
+
+    </div>
+
+    <!-- AI ANALISA -->
+
+    <div class="ai-box">
+
+      <h3>
+        <i class="fa-solid fa-robot"></i>
+        AI Analisa
+      </h3>
+
+      <div class="ai-content">
+
+        <p>
+          Pengeluaran kamu bulan ini naik 5.7%
+          dibanding bulan lalu.
+        </p>
+
+        <br>
+
+        <p>
+          Kategori paling boros:
+          <strong>Makanan & Minuman</strong>
+        </p>
+
+        <br>
+
+        <p>
+          Kurangi pengeluaran harian
+          agar target tabungan tercapai.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="/static/js/chart.js"></script>
+
+</body>
 </html>
