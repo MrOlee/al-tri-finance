@@ -1,2 +1,2 @@
-const SUPABASE_URL = 'ISI_URL_SUPABASE_KAMU'
-const SUPABASE_KEY = 'ISI_KEY_SUPABASE_KAMU'
+const SUPABASE_URL = 'https://kfrbbypfjzfxrhgvggmc.supabase.co'
+const SUPABASE_KEY = 'sb_publishable__bscQnB0XIrLX3w62vNOAQ_0hiqfwhy'
